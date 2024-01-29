@@ -13,7 +13,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 }) => {
   return (
     <div
-      className={`flex items-center body-m justify-center cursor-pointer py-[14px] w-full bg-${bgcolor} text-${textcolor} rounded-[6px]`}
+      className={`flex items-center body-m justify-center cursor-pointer py-[14px] w-full text-${textcolor} rounded-[6px]`}
     >
       {text}
     </div>

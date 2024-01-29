@@ -22,7 +22,7 @@ const LoginModal: React.FC<LoginModalProps> = ({onSignUpClick}) => {
           showImage={false}
           showBorder={true}
         />
-        <CustomButton text="Login" bgcolor="red" textcolor="white" />
+        <CustomButton text="Login" bgcolor="bg-red" textcolor="white" />
           <p className="body-m text-white text-center">Don&apos;t have an account?
             <span className="body-m text-red cursor-pointer" onClick={onSignUpClick} > Sign Up</span>
           </p>

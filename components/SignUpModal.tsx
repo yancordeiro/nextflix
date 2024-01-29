@@ -28,7 +28,7 @@ const SingUpModal: React.FC<SingUpModalProps> = ({onLoginClick}) => {
         showImage={false}
         showBorder={true}
       />
-      <CustomButton text="Create an account" bgcolor="red" textcolor="white" />
+      <CustomButton text="Create an account" bgcolor="bg-red" textcolor="white" />
       <p className="body-m text-white text-center">
         Already have an account?
         <span className="body-m text-red cursor-pointer" onClick={onLoginClick}> Login</span>

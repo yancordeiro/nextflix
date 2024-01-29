@@ -26,9 +26,9 @@ const InputFIeld: React.FC<InputFIeldProps> = ({
         />
       )}
       {showBorder ?
-        <input className="bg-[transparent] text-heading-m text-white border-b border-lightBlue w-full placeholder:opacity-50 outline-none focus:border-b focus:border-lightBlue" type={type} placeholder={placeholder} />
+        <input className="bg-[transparent] body-m text-heading-m text-white border-b border-lightBlue w-full placeholder:opacity-50 outline-none focus:border-b focus:border-lightBlue" type={type} placeholder={placeholder} />
         :
-        <input className="bg-[transparent] text-heading-m text-white w-full placeholder:opacity-50 outline-none focus:border-b focus:border-lightBlue" type={type} placeholder={placeholder} />
+        <input className="bg-[transparent] body-m text-heading-m text-white w-full placeholder:opacity-50 outline-none focus:border-b focus:border-lightBlue" type={type} placeholder={placeholder} />
       }
     </div>
   );
