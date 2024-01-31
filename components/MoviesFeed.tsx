@@ -6,7 +6,7 @@ interface MoviesFeedProps {
 
 const MoviesFeed: React.FC<MoviesFeedProps> = () => {
     return (
-        <div>
+        <div className='text-white'>
             movies feed
         </div>
     );

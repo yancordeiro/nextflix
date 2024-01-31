@@ -6,7 +6,7 @@ interface SeriesFeedProps {
 
 const SeriesFeed: React.FC<SeriesFeedProps> = () => {
     return (
-        <div>
+        <div className='text-white'>
             SeriesFeed
         </div>
     );

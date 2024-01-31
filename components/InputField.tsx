@@ -15,7 +15,7 @@ const InputFIeld: React.FC<InputFIeldProps> = ({
   showBorder
 }) => {
   return (
-    <div className="flex flex-row gap-[24px]">
+    <div className="flex flex-row gap-[24px] w-full">
       {showImage && (
         <Image
           className=""

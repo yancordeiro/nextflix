@@ -6,7 +6,7 @@ interface FavoritesFeedProps {
 
 const FavoritesFeed: React.FC<FavoritesFeedProps> = () => {
     return (
-        <div>
+        <div className='text-white'>
             favorites feed
         </div>
     );

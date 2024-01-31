@@ -16,11 +16,12 @@ export default function Home() {
 
   const [currentWidget, setCurrentWidget] = useState<string>("HomeFeed");
   const CurrentWidget = widgetComponents[currentWidget];
-  console.log(currentWidget);
   return (
-    <div className="h-dvh p-[32px]">
+    <div className="flex flex-row h-dvh p-[32px] gap-[36px]">
       <LateralBar setCurrentWidget={setCurrentWidget} />
-      <CurrentWidget />
+      <div className="mt-[32px] w-full">
+        {CurrentWidget && <CurrentWidget />}
+      </div>
     </div>
   );
 }
