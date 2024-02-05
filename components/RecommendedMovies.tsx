@@ -29,8 +29,8 @@ interface RecommendedMoviesProps {
 
 const RecommendedMovies: React.FC<RecommendedMoviesProps> = ({ data }) => {
   return (
-    <div className="pr-[32px]">
-      <h1 className="text-white heading-l">Recommended for you</h1>
+    <div className="pr-[32px] mt-[40px] ">
+      <h1 className="text-white heading-l mb-[32px]">Recommended for you</h1>
       <div className="grid grid-cols-4 gap-x-[20px] gap-y-[32px]">
         {data.map((item, index) => (
           <div className="flex flex-col w-fit" key={index}>
