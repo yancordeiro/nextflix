@@ -17,7 +17,7 @@ export default function Home() {
   const [currentWidget, setCurrentWidget] = useState<string>("HomeFeed");
   const CurrentWidget = widgetComponents[currentWidget];
 return (
-  <div className="flex flex-row h-full p-[32px] gap-[36px] w-full">
+  <div className="flex flex-row h-full p-[32px] pr-0 gap-[36px] w-full">
     <div>
       <LateralBar setCurrentWidget={setCurrentWidget} />
     </div>

@@ -1,28 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-interface Thumbnail {
-  small?: string;
-  medium?: string;
-  large?: string;
+import Splide from "@splidejs/splide";
+interface TrendingItem {
+  small: string;
+  large: string;
 }
 
-interface Item {
-  title: string;
-  thumbnail?: {
-    trending?: Thumbnail;
-    regular?: Thumbnail;
+interface Thumbnail {
+  trending?: TrendingItem;
+  regular: {
+    small: string;
+    medium: string;
+    large: string;
   };
+}
+
+interface HomeFeedItem {
+  title: string;
+  thumbnail: Thumbnail;
   year: number;
   category: string;
   rating: string;
   isBookmarked: boolean;
-  isTrending: boolean;
+  isTrending?: boolean;
 }
+
 interface TrendingCarouselProps {
-  data: Item[];
+  data: HomeFeedItem[];
 }
 
 const TrendingCarousel: React.FC<TrendingCarouselProps> = ({ data }) => {
+  useEffect(() => {
+    new Splide(".splide", {
+      type: "loop",
+      perPage: 3,
+      height: 230,
+      width: "100%",
+      fixedWidth: 430,
+      pagination: false,
+      arrows: false,
+      gap: 40,
+    }).mount();
+  }, []);
   return (
     <section className="splide h-full w-full text-white mt-[25px]">
       <div className="splide__track">
@@ -33,13 +52,6 @@ const TrendingCarousel: React.FC<TrendingCarouselProps> = ({ data }) => {
                 item.thumbnail.trending &&
                 item.thumbnail.trending.large && (
                   <>
-                    {/* <Image
-                            className="rounded-[8px]"
-                            src={item.thumbnail.trending.large}
-                            alt={item.title}
-                            width={470}
-                            height={230}
-                          /> */}
                     <div
                       className="flex flex-col justify-between h-full box pt-[24px] pb-[24px] pl-[24px] pr-[24px] rounded-[8px] relative"
                       style={{
